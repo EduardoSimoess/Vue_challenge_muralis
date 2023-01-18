@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Formulário de cadastro</title>
+</head>
+<body>
+    <main id="app">
+        <header>
+            <h3>Cadastro de Ingressantes</h3>
+        </header>
+
+        <form>
+            <section id="infoSection">
+                
+                <label for="fullName" class="input">Nome
+                <input type="text" id="fullName" 
+                name="fullName" minlength="10" maxlength="40"
+                @change="(event) => name = event.target.value"/>
+                </label>
+
+
+                <label for="courses" class="input">Curso
+                    <select name="courses" 
+                    @change="(event) => selectedCourse = event.target.value"
+                    class="dropDown">
+                        <option value="">Selecione uma opção</option>
+                        <option value="Matemática">Matemática</option>
+                        <option value="Letras">Letras</option>
+                        <option value="Geografia">Geografia</option>
+                    </select>
+                </label>
+
+                <label for="states" class="input">Estado
+                    <select name="states" 
+                    @change="(event) => updateState(event)"
+                    class="dropDown">
+                        <option value="">Selecione uma opção</option>
+                        <option value="sp">São Paulo</option>
+                        <option value="rj">Rio de Janeiro</option>
+                        <option value="mg">Minas Gerais</option>
+                    </select>
+                </label>
+
+                <label for="states" class="input">Cidades
+                    <select name="citys" 
+                    @change="(event) => selectedCity = event.target.value"
+                    class="dropDown">
+                        <option v-for="city in cities" value={{city}}>{{city}}</option>
+                    </select>
+                </label>
+
+            </section>
+            <section id="buttons">
+                <button type="menu" id="goBackBtn">Voltar</button>
+                <button type="submit" 
+                :disabled="selectedCourse === '' || selectedState === '' || selectedCity === '' || name === ''"
+                id="submitBtn"
+                >Gravar</button>
+            </section>
+        
+        </form>
+    </main>  
+
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

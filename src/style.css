@@ -1,0 +1,72 @@
+body {
+    margin: 0px;
+    font-size: 25px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+form {
+    margin: 10px;
+}
+
+main, form, #infoSection, .input {
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    background-color: blue;
+    text-align: center;
+}
+
+#submitBtn {
+    background-color: rgb(18, 204, 18);
+}
+
+#goBackBtn {
+    background-color: rgb(245, 189, 31);
+}
+
+header, #submitBtn, #goBackBtn {
+    color: white;
+}
+
+@media screen and (max-width: 500px) {
+    header {
+        border: 1px solid darkblue;
+    }
+
+    form {
+        gap: 8px;
+        padding-top: 20px;
+    }
+
+    .input {
+        gap: 3px;
+    }
+
+    #infoSection {
+        gap: 13px;
+    }
+
+    #fullName {
+        height: 30px;
+        font-size: 20px;
+    }
+
+    .dropDown {
+        height: 35px;
+        font-size: 20px;
+    }
+
+    #buttons {
+        padding-top: 20px;
+        display: flex;
+        justify-content: space-around;
+    }
+
+    button {
+        padding: 10px 20px;
+        font-size: 20px;        
+        border-radius: 5px;
+    }
+}
