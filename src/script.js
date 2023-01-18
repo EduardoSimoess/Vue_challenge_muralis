@@ -1,3 +1,5 @@
+const select = 'Selecione uma opção';
+
 const formHandler = {
     data() {
       return {
@@ -5,7 +7,7 @@ const formHandler = {
         selectedCourse: '',
         selectedState: '',
         selectedCity: '',
-        cities: ['Selecione uma opção'],
+        cities: [select],
       };
     },
     methods: {
@@ -14,20 +16,19 @@ const formHandler = {
         this.selectedState = state;
         switch (state) {
           case 'sp':
-            this.cities = ['Selecione uma opção', 'Mogi das Cruzes', 'Suzano', 'Poá', 'Guararema'];
+            this.cities = [select, 'Mogi das Cruzes', 'Suzano', 'Poá', 'Guararema'];
             break;
           case 'rj':
-            this.cities = ['Selecione uma opção', 'Angra dos Reis', 'Niterói', 'Itaboraí'];
+            this.cities = [select, 'Angra dos Reis', 'Niterói', 'Itaboraí'];
             break;
           case 'mg':
-            this.cities = ['Selecione uma opção', 'Belo Horizonte', 'Monte Azul', 'Muzambinho'];
+            this.cities = [select, 'Belo Horizonte', 'Monte Azul', 'Muzambinho'];
             break;
           default:
-            this.cities = ['Selecione uma opção'];
+            this.cities = [select];
         }
       },
     },
   };
   
   Vue.createApp(formHandler).mount('#app');
-  
