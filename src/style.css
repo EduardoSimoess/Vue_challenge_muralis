@@ -30,6 +30,13 @@ header , #submitBtn , #goBackBtn {
   color: white;
 }
 
+.dropDown {
+  -webkit-appearance: none;
+  background: url(./Images/2b07.png) no-repeat right;
+  background-color: white;
+  background-size: 25px 25px;
+}
+
 @media screen and ( max-width : 500px ) {
 
   header , #fullName , .dropDown {
@@ -61,7 +68,6 @@ header , #submitBtn , #goBackBtn {
   .dropDown {
     height: 35px;
     font-size: 20px;
-    background-color: white;
   }
 
   #buttons {
@@ -94,7 +100,6 @@ header , #submitBtn , #goBackBtn {
   .dropDown {
     height: 35px;
     font-size: 20px;
-    background-color: white;
   }
 
   button {
