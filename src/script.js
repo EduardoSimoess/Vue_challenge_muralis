@@ -28,6 +28,10 @@ const formHandler = {
             this.cities = [select];
         }
       },
+
+      submit() {
+        alert("Resposta registrada com sucesso!");
+      },
     },
   };
   

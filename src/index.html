@@ -59,6 +59,7 @@
                 <button type="submit" 
                 :disabled="selectedCourse === '' || selectedState === '' || selectedCity === '' || name === ''"
                 id="submitBtn"
+                @click="submit()"
                 >Gravar</button>
             </section>
         
